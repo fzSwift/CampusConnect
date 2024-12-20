@@ -1,0 +1,42 @@
+/* src/components/CalendarView.css */
+.calendar-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.calendar-view h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #333;
+  animation: slideInFromLeft 1s ease-in-out;
+}
+
+.selected-date-events {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+.selected-date-events h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.selected-date-events ul {
+  list-style: none;
+  padding: 0;
+}
+
+.selected-date-events li {
+  background: white;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
