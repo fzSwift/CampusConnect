@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useApi } from '../hooks/useApi';
 import './Auth.css';
 
@@ -17,6 +17,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await apiCall('post', '/api/auth/login', formData);
+      console.log(response);
       localStorage.setItem('token', response.token);
       localStorage.setItem('userId', response.userId);
       navigate(response.isAdmin ? '/admin-dashboard' : '/user-dashboard');
@@ -49,6 +50,7 @@ const Login = () => {
         <button type="submit" disabled={loading}>
           {loading ? 'Logging in...' : 'Login'}
         </button>
+        <p>Don't have an account <Link to='/register'>Register</Link></p>
       </form>
     </div>
   );

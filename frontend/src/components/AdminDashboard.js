@@ -31,6 +31,7 @@ const AdminDashboard = () => {
       // Fetch admin info
       const adminRes = await apiCall('get', `/api/users/${userId}`);
       console.log('Admin info response:', adminRes);
+      localStorage.setItem('user', JSON.stringify(adminRes));
       
       setStats({
         eventCount: eventsRes.length,

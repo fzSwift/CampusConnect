@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useApi } from '../hooks/useApi';
 import './Auth.css';
 
@@ -77,6 +77,9 @@ const Register = () => {
         <button type="submit" disabled={loading}>
           {loading ? 'Registering...' : 'Register'}
         </button>
+        <p>
+          Already have an account? <Link to="/login">Login</Link>
+        </p>
       </form>
     </div>
   );

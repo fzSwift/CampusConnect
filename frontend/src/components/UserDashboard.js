@@ -25,6 +25,7 @@ const UserDashboard = () => {
       const userId = localStorage.getItem('userId');
       const data = await apiCall('get', `/api/users/${userId}`);
       setUserInfo(data);
+      localStorage.setItem('user', JSON.stringify(data));
     } catch (err) {
       console.error(err);
     }
@@ -52,6 +53,7 @@ const UserDashboard = () => {
   const handleLogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('userId');
+    localStorage.removeItem('user');
     navigate('/login');
   };
 

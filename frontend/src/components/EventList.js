@@ -25,7 +25,7 @@ const EventList = () => {
   };
 
   const handleRSVP = async (eventId) => {
-    if (!isAuthenticated) {
+    if (!localStorage.getItem('userId')) {
       navigate('/login');
       return;
     }
