@@ -3,6 +3,10 @@
 ## Project Overview
 CampusConnect is a web application designed to help students and staff manage and participate in campus events. The application is built using React for the frontend and Node.js/Express for the backend, with MongoDB as the database.
 
+https://campus-connect-one-omega.vercel.app/
+
+
+
 ## Tech Stack
 - Frontend: React.js
 - Backend: Node.js, Express.js
